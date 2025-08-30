@@ -11,7 +11,6 @@ export function Settings() {
 
   const tabs = [
     { id: 'profile', label: 'Profil', icon: User },
-    { id: 'notifications', label: 'Notifications', icon: Bell },
     { id: 'security', label: 'Sécurité', icon: Shield },
     { id: 'system', label: 'Système', icon: Database }
   ];
@@ -75,7 +74,7 @@ export function Settings() {
                     <Input label="Email" type="email" defaultValue="admin@future-clim.dz" />
                   </div>
                   <Input label="Téléphone" defaultValue="+213 555 123 456" />
-                  <Select
+                  {/* <Select
                     label="Rôle"
                     value="admin"
                     options={[
@@ -84,46 +83,11 @@ export function Settings() {
                       { value: 'project_manager', label: 'Responsable projet' }
                     ]}
                     onChange={() => {}}
-                  />
+                  /> */}
                 </div>
               )}
 
-              {activeTab === 'notifications' && (
-                <div className="space-y-6">
-                  <div>
-                    <h4 className="font-medium text-gray-900 mb-3">Notifications par email</h4>
-                    <div className="space-y-3">
-                      <label className="flex items-center space-x-3">
-                        <input type="checkbox" defaultChecked className="rounded" />
-                        <span className="text-sm text-gray-700">Nouvelles interventions urgentes</span>
-                      </label>
-                      <label className="flex items-center space-x-3">
-                        <input type="checkbox" defaultChecked className="rounded" />
-                        <span className="text-sm text-gray-700">Interventions en retard</span>
-                      </label>
-                      <label className="flex items-center space-x-3">
-                        <input type="checkbox" className="rounded" />
-                        <span className="text-sm text-gray-700">Rapports hebdomadaires</span>
-                      </label>
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-medium text-gray-900 mb-3">Notifications push</h4>
-                    <div className="space-y-3">
-                      <label className="flex items-center space-x-3">
-                        <input type="checkbox" defaultChecked className="rounded" />
-                        <span className="text-sm text-gray-700">Assignations d'interventions</span>
-                      </label>
-                      <label className="flex items-center space-x-3">
-                        <input type="checkbox" className="rounded" />
-                        <span className="text-sm text-gray-700">Mises à jour de statut</span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              )}
-
+              
               {activeTab === 'security' && (
                 <div className="space-y-4">
                   <Input label="Mot de passe actuel" type="password" />
@@ -173,7 +137,7 @@ export function Settings() {
                     </div>
                   </div>
 
-                  <div>
+                  {/* <div>
                     <h4 className="font-medium text-gray-900 mb-3">Sauvegarde</h4>
                     <div className="bg-gray-50 p-4 rounded-lg">
                       <div className="flex items-center justify-between">
@@ -187,7 +151,7 @@ export function Settings() {
                         </Button>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               )}
 
